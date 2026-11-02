@@ -57,12 +57,12 @@ class WebGatewayHandler(SimpleHTTPRequestHandler):
         web_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "ui"))
         super().__init__(*args, directory=web_dir, **kwargs)
 
-    # def handle(self):
-    #     """Bắt và bỏ qua lỗi khi trình duyệt chủ động ngắt kết nối đột ngột (chuyển trang, f5)"""
-    #     try:
-    #         super().handle()
-    #     except (ConnectionAbortedError, ConnectionResetError, BrokenPipeError):
-    #         pass  # Client đã đóng socket, không cần xử lý thêm
+    def handle(self):
+        """Bắt và bỏ qua lỗi khi trình duyệt chủ động ngắt kết nối đột ngột (chuyển trang, f5)"""
+        try:
+            super().handle()
+        except (ConnectionAbortedError, ConnectionResetError, BrokenPipeError):
+            pass  # Client đã đóng socket, không cần xử lý thêm
 
     def do_GET(self):
         parsed_path = urlparse(self.path)
@@ -149,30 +149,6 @@ class WebGatewayHandler(SimpleHTTPRequestHandler):
 
         else:
             self.send_json_response(404, {"success": False, "message": "Endpoint not found"})
-
-    # def handle_sse_stream(self):
-    #     """Duy trì kết nối HTTP mở liên tục để đẩy sự kiện real-time xuống trình duyệt."""
-    #     self.send_response(200)
-    #     self.send_header('Content-Type', 'text/event-stream')
-    #     self.send_header('Cache-Control', 'no-cache')
-    #     self.send_header('Connection', 'keep-alive')
-    #     self.end_headers()
-
-    #     q = queue.Queue()
-    #     with sse_lock:
-    #         sse_queues.append(q)
-
-    #     try:
-    #         while True:
-    #             event_data = q.get()
-    #             self.wfile.write(event_data.encode('utf-8'))
-    #             self.wfile.flush()
-    #     except Exception:
-    #         pass
-    #     finally:
-    #         with sse_lock:
-    #             if q in sse_queues:
-    #                 sse_queues.remove(q)
 
     def handle_sse_stream(self):
         self.send_response(200)

@@ -1,8 +1,8 @@
-let currentMode = 'login'; // Auth state
+﻿let currentMode = 'login'; // Auth state
 let currentTarget = '__BROADCAST__';
 let currentUser = sessionStorage.getItem('username') || '';
 let pendingTransferId = '';
-
+const unreadUsers = new Set();
 const authForm = document.getElementById('auth-form');
 const chatMessages = document.getElementById('chat-messages');
 
@@ -44,22 +44,6 @@ evtSource.addEventListener('register_result', (e) => {
     if (authForm) document.getElementById('auth-msg').innerText = data.message;
 });
 
-// evtSource.addEventListener('user_list_updated', (e) => {
-//     if (!chatMessages) return;
-//     const users = JSON.parse(e.data).users;
-//     const list = document.getElementById('user-list');
-//     list.innerHTML = '';
-//     users.forEach(u => {
-//         if (u === currentUser) return;
-//         const div = document.createElement('div');
-//         div.className = `peer-item ${currentTarget === u ? 'active' : ''}`;
-//         div.id = `peer-${u}`;
-//         div.innerText = u;
-//         div.onclick = () => selectTarget(u);
-//         list.appendChild(div);
-//     });
-// });
-
 evtSource.addEventListener('user_list_updated', (e) => {
     if (!chatMessages) return;
     const users = JSON.parse(e.data).users;
@@ -76,6 +60,11 @@ evtSource.addEventListener('user_list_updated', (e) => {
         div.innerText = username;
         div.onclick = () => selectTarget(username);
         list.appendChild(div);
+        if (unreadUsers.has(username)) {
+            const dot = document.createElement('span');
+            dot.className = 'unread-dot';
+            div.appendChild(dot);
+        }
     });
 });
 
@@ -87,6 +76,14 @@ evtSource.addEventListener('message_received', (e) => {
     
     if (currentTarget === intendedTarget) {
         appendMessage(data.sender, data.text, data.sender === currentUser ? 'self' : 'other');
+    } else {
+        unreadUsers.add(intendedTarget);
+        const peerElement = document.getElementById(`peer-${intendedTarget}`);
+        if (peerElement && !peerElement.querySelector('.unread-dot')) {
+            const dot = document.createElement('span');
+            dot.className = 'unread-dot';
+            peerElement.appendChild(dot);
+        }
     }
 });
 
@@ -161,7 +158,15 @@ async function sendFile() {
 function selectTarget(target) {
     currentTarget = target;
     document.querySelectorAll('.room-btn, .peer-item').forEach(el => el.classList.remove('active'));
-    document.getElementById(`peer-${target}`).classList.add('active');
+    
+    const targetElement = document.getElementById(`peer-${target}`);
+    targetElement.classList.add('active');
+    
+    unreadUsers.delete(target); 
+    // Xóa dấu chấm đỏ báo tin nhắn mới
+    const dot = targetElement.querySelector('.unread-dot');
+    if (dot) dot.remove();
+
     document.getElementById('chat-title').innerText = target === '__BROADCAST__' ? 'Phòng Chat Chung' : `Chat riêng với: ${target}`;
     
     fetch('/api/chat_history', {
@@ -173,14 +178,29 @@ function selectTarget(target) {
 
 async function sendMessage() {
     const input = document.getElementById('msg-input');
-    if (!input.value.trim()) return;
+    const text = input.value.trim();
+    if (!text) return;
     
-    await fetch('/api/send_message', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ target: currentTarget, text: input.value, is_private: currentTarget !== '__BROADCAST__' })
-    });
+    // 1. Hiển thị ngay lập tức tin nhắn của chính mình lên giao diện (màu xanh bên phải)
+    appendMessage(currentUser || 'Tôi', text, 'self');
+    
+    // 2. Xóa ô nhập tin nhắn
     input.value = '';
+    
+    // 3. Gửi tin nhắn qua Web Gateway tới Server
+    try {
+        await fetch('/api/send_message', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                target: currentTarget, 
+                text: text, 
+                is_private: currentTarget !== '__BROADCAST__' 
+            })
+        });
+    } catch (err) {
+        console.error("Lỗi gửi tin nhắn:", err);
+    }
 }
 
 function appendMessage(sender, text, type) {
@@ -192,9 +212,50 @@ function appendMessage(sender, text, type) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
+function renderUserList(users) {
+    if (!chatMessages) return;
+    const list = document.getElementById('user-list');
+    if (!list) return;
+    list.innerHTML = '';
+    
+    users.forEach(u => {
+        const username = typeof u === 'object' && u !== null ? u.username : u;
+        if (username === currentUser) return;
+        const div = document.createElement('div');
+        div.className = `peer-item ${currentTarget === username ? 'active' : ''}`;
+        div.id = `peer-${username}`;
+        div.innerText = username;
+        if (unreadUsers.has(username)) {
+            const dot = document.createElement('span');
+            dot.className = 'unread-dot';
+            div.appendChild(dot);
+        }
+        div.onclick = () => selectTarget(username);
+        list.appendChild(div);
+    });
+}
+
+async function loadUserList() {
+    try {
+        const res = await fetch('/api/users');
+        const data = await res.json();
+        if (data.users && data.users.length > 0) {
+            renderUserList(data.users);
+        }
+    } catch (e) {
+        console.error("Lỗi tải danh sách người dùng:", e);
+    }
+}
+
+evtSource.onopen = () => {
+    if (chatMessages) {
+        fetch('/api/refresh_users', { method: 'POST' });
+    }
+};
+
 // Initialize Dashboard
 if (chatMessages) {
     document.getElementById('current-user-display').innerText = currentUser;
-    fetch('/api/refresh_users', { method: 'POST' });
+    loadUserList();
     setTimeout(() => selectTarget('__BROADCAST__'), 500);
 }

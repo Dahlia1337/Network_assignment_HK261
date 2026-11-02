@@ -107,3 +107,22 @@
 2026-11-02 13:31:51,610 [INFO] [SessionManager] [-] User 'steve' đã thoát khỏi hệ thống. Còn lại online: 0
 2026-11-02 13:31:51,610 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: steve
 2026-11-02 13:31:51,610 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: alice
+2026-11-02 15:37:13,181 [INFO] [CoreServer] [UDP] Discovery & Heartbeat service đang hoạt động trên cổng UDP 8889
+2026-11-02 15:37:13,182 [INFO] [CoreServer] [UDP File Router] Đang lắng nghe file streaming tại cổng UDP 8890
+2026-11-02 15:37:13,182 [INFO] [CoreServer] [Session Cleaner] Luồng dọn dẹp phiên chết đã khởi động (chu kỳ 3s, timeout 15.0s)
+2026-11-02 15:37:13,182 [INFO] [CoreServer] [TCP] Server đang lắng nghe tại 127.0.0.1:8888 (Sẵn sàng phục vụ)
+2026-11-02 15:37:26,599 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:64869
+2026-11-02 15:37:32,642 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'alice'
+2026-11-02 15:37:32,642 [INFO] [SessionManager] [+] User 'alice' đã đăng nhập từ 127.0.0.1:64869. Tổng online: 1
+2026-11-02 15:37:32,644 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'alice': 127.0.0.1:57492
+2026-11-02 15:37:32,645 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'alice' tại 127.0.0.1:57492
+2026-11-02 15:37:43,043 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:64903
+2026-11-02 15:37:51,174 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'bob'
+2026-11-02 15:37:51,175 [INFO] [SessionManager] [+] User 'bob' đã đăng nhập từ 127.0.0.1:64903. Tổng online: 2
+2026-11-02 15:37:51,176 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'bob': 127.0.0.1:52451
+2026-11-02 15:37:51,177 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'bob' tại 127.0.0.1:52451
+2026-11-02 15:38:02,822 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:64924
+2026-11-02 15:38:14,695 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'steve'
+2026-11-02 15:38:14,696 [INFO] [SessionManager] [+] User 'steve' đã đăng nhập từ 127.0.0.1:64924. Tổng online: 3
+2026-11-02 15:38:14,698 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'steve': 127.0.0.1:64443
+2026-11-02 15:38:14,699 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'steve' tại 127.0.0.1:64443
