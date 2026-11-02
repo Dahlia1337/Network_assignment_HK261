@@ -1,0 +1,109 @@
+2026-11-01 23:08:56,273 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:64614
+2026-11-01 23:09:12,746 [INFO] [UserManager] [Register] Đăng ký thành công tài khoản mới: 'steve'
+2026-11-01 23:09:15,048 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'steve'
+2026-11-01 23:09:15,048 [INFO] [SessionManager] [+] User 'steve' đã đăng nhập từ 127.0.0.1:64614. Tổng online: 3
+2026-11-01 23:09:15,051 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'steve': 127.0.0.1:64763
+2026-11-01 23:09:15,053 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'steve' tại 127.0.0.1:64763
+2026-11-01 23:10:15,222 [INFO] [SessionManager] [-] User 'alice' đã thoát khỏi hệ thống. Còn lại online: 2
+2026-11-01 23:10:15,224 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: alice
+2026-11-01 23:10:18,851 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:64654
+2026-11-01 23:11:04,800 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'alice'
+2026-11-01 23:11:04,801 [INFO] [SessionManager] [+] User 'alice' đã đăng nhập từ 127.0.0.1:64654. Tổng online: 3
+2026-11-01 23:11:04,803 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'alice': 127.0.0.1:61755
+2026-11-01 23:11:04,804 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'alice' tại 127.0.0.1:61755
+2026-11-01 23:11:58,026 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'steve'
+2026-11-01 23:12:49,128 [INFO] [SessionManager] [-] User 'steve' đã thoát khỏi hệ thống. Còn lại online: 2
+2026-11-01 23:12:49,129 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: steve
+2026-11-01 23:12:51,657 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:64714
+2026-11-01 23:13:02,667 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'steve'
+2026-11-01 23:13:02,668 [INFO] [SessionManager] [+] User 'steve' đã đăng nhập từ 127.0.0.1:64714. Tổng online: 3
+2026-11-01 23:13:02,670 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'steve': 127.0.0.1:49985
+2026-11-01 23:13:02,672 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'steve' tại 127.0.0.1:49985
+2026-11-01 23:14:40,365 [INFO] [SessionManager] [-] User 'alice' đã thoát khỏi hệ thống. Còn lại online: 2
+2026-11-01 23:14:40,367 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: alice
+2026-11-01 23:14:40,728 [INFO] [SessionManager] [-] User 'steve' đã thoát khỏi hệ thống. Còn lại online: 1
+2026-11-01 23:14:40,736 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: steve
+2026-11-01 23:14:50,514 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:64766
+2026-11-01 23:15:03,172 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'alice'
+2026-11-01 23:15:03,173 [INFO] [SessionManager] [+] User 'alice' đã đăng nhập từ 127.0.0.1:64766. Tổng online: 2
+2026-11-01 23:15:03,175 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'alice': 127.0.0.1:60909
+2026-11-01 23:15:03,175 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'alice' tại 127.0.0.1:60909
+2026-11-01 23:17:45,254 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:64795
+2026-11-01 23:18:01,693 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'steve'
+2026-11-01 23:18:01,694 [INFO] [SessionManager] [+] User 'steve' đã đăng nhập từ 127.0.0.1:64795. Tổng online: 3
+2026-11-01 23:18:01,697 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'steve': 127.0.0.1:55131
+2026-11-01 23:18:01,698 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'steve' tại 127.0.0.1:55131
+2026-11-01 23:43:06,713 [INFO] [SessionManager] [-] User 'bob' đã thoát khỏi hệ thống. Còn lại online: 2
+2026-11-01 23:43:06,721 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: bob
+2026-11-01 23:43:07,084 [INFO] [SessionManager] [-] User 'alice' đã thoát khỏi hệ thống. Còn lại online: 1
+2026-11-01 23:43:07,095 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: alice
+2026-11-01 23:43:07,430 [INFO] [SessionManager] [-] User 'steve' đã thoát khỏi hệ thống. Còn lại online: 0
+2026-11-01 23:43:07,439 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: steve
+2026-11-01 23:43:30,261 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:64979
+2026-11-01 23:43:35,160 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:64992
+2026-11-01 23:43:45,415 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:65003
+2026-11-01 23:43:53,734 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'alice'
+2026-11-01 23:43:53,740 [INFO] [SessionManager] [+] User 'alice' đã đăng nhập từ 127.0.0.1:64979. Tổng online: 1
+2026-11-01 23:43:53,744 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'alice': 127.0.0.1:54368
+2026-11-01 23:43:53,746 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'alice' tại 127.0.0.1:54368
+2026-11-01 23:44:02,450 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'bob'
+2026-11-01 23:44:02,452 [INFO] [SessionManager] [+] User 'bob' đã đăng nhập từ 127.0.0.1:64992. Tổng online: 2
+2026-11-01 23:44:02,453 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'bob': 127.0.0.1:63605
+2026-11-01 23:44:02,454 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'bob' tại 127.0.0.1:63605
+2026-11-01 23:44:19,850 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'steve'
+2026-11-01 23:44:19,850 [INFO] [SessionManager] [+] User 'steve' đã đăng nhập từ 127.0.0.1:65003. Tổng online: 3
+2026-11-01 23:44:19,854 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'steve': 127.0.0.1:53595
+2026-11-01 23:44:19,855 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'steve' tại 127.0.0.1:53595
+2026-11-01 23:47:01,497 [INFO] [SessionManager] [-] User 'alice' đã thoát khỏi hệ thống. Còn lại online: 2
+2026-11-01 23:47:01,504 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: alice
+2026-11-01 23:47:01,940 [INFO] [SessionManager] [-] User 'bob' đã thoát khỏi hệ thống. Còn lại online: 1
+2026-11-01 23:47:01,941 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: bob
+2026-11-01 23:47:02,265 [INFO] [SessionManager] [-] User 'steve' đã thoát khỏi hệ thống. Còn lại online: 0
+2026-11-01 23:47:02,276 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: steve
+2026-11-01 23:47:17,503 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:65063
+2026-11-01 23:47:26,035 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'alice'
+2026-11-01 23:47:26,035 [INFO] [SessionManager] [+] User 'alice' đã đăng nhập từ 127.0.0.1:65063. Tổng online: 1
+2026-11-01 23:47:26,037 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'alice': 127.0.0.1:57922
+2026-11-01 23:47:26,038 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'alice' tại 127.0.0.1:57922
+2026-11-01 23:47:31,493 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:65087
+2026-11-01 23:47:48,613 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'bob'
+2026-11-01 23:47:48,614 [INFO] [SessionManager] [+] User 'bob' đã đăng nhập từ 127.0.0.1:65087. Tổng online: 2
+2026-11-01 23:47:48,616 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'bob': 127.0.0.1:62789
+2026-11-01 23:47:48,616 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'bob' tại 127.0.0.1:62789
+2026-11-01 23:48:23,201 [INFO] [SessionManager] [-] User 'bob' đã thoát khỏi hệ thống. Còn lại online: 1
+2026-11-01 23:48:23,207 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: bob
+2026-11-01 23:48:32,801 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:65122
+2026-11-01 23:48:40,871 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'bob'
+2026-11-01 23:48:40,872 [INFO] [SessionManager] [+] User 'bob' đã đăng nhập từ 127.0.0.1:65122. Tổng online: 2
+2026-11-01 23:48:40,874 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'bob': 127.0.0.1:63500
+2026-11-01 23:48:40,874 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'bob' tại 127.0.0.1:63500
+2026-11-01 23:49:08,914 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:65138
+2026-11-01 23:49:15,611 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'steve'
+2026-11-01 23:49:15,611 [INFO] [SessionManager] [+] User 'steve' đã đăng nhập từ 127.0.0.1:65138. Tổng online: 3
+2026-11-01 23:49:15,614 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'steve': 127.0.0.1:55335
+2026-11-01 23:49:15,615 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'steve' tại 127.0.0.1:55335
+2026-11-02 08:27:44,441 [INFO] [CoreServer] [UDP] Discovery & Heartbeat service đang hoạt động trên cổng UDP 8889
+2026-11-02 08:27:44,444 [INFO] [CoreServer] [UDP File Router] Đang lắng nghe file streaming tại cổng UDP 8890
+2026-11-02 08:27:44,448 [INFO] [CoreServer] [Session Cleaner] Luồng dọn dẹp phiên chết đã khởi động (chu kỳ 3s, timeout 15.0s)
+2026-11-02 08:27:44,448 [INFO] [CoreServer] [TCP] Server đang lắng nghe tại 127.0.0.1:8888 (Sẵn sàng phục vụ)
+2026-11-02 08:27:48,768 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:51874
+2026-11-02 08:27:52,870 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:51881
+2026-11-02 08:27:57,877 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 127.0.0.1:51889
+2026-11-02 08:30:22,380 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'alice'
+2026-11-02 08:30:22,388 [INFO] [SessionManager] [+] User 'alice' đã đăng nhập từ 127.0.0.1:51874. Tổng online: 1
+2026-11-02 08:30:22,390 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'alice': 127.0.0.1:61095
+2026-11-02 08:30:22,392 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'alice' tại 127.0.0.1:61095
+2026-11-02 08:30:28,882 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'bob'
+2026-11-02 08:30:28,889 [INFO] [SessionManager] [+] User 'bob' đã đăng nhập từ 127.0.0.1:51881. Tổng online: 2
+2026-11-02 08:30:28,894 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'bob': 127.0.0.1:64439
+2026-11-02 08:30:28,897 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'bob' tại 127.0.0.1:64439
+2026-11-02 08:30:42,851 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'steve'
+2026-11-02 08:30:42,852 [INFO] [SessionManager] [+] User 'steve' đã đăng nhập từ 127.0.0.1:51889. Tổng online: 3
+2026-11-02 08:30:42,855 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'steve': 127.0.0.1:56771
+2026-11-02 08:30:42,856 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'steve' tại 127.0.0.1:56771
+2026-11-02 08:32:53,949 [INFO] [SessionManager] [-] User 'bob' đã thoát khỏi hệ thống. Còn lại online: 2
+2026-11-02 08:32:53,957 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: bob
+2026-11-02 13:31:51,594 [INFO] [SessionManager] [-] User 'alice' đã thoát khỏi hệ thống. Còn lại online: 1
+2026-11-02 13:31:51,610 [INFO] [SessionManager] [-] User 'steve' đã thoát khỏi hệ thống. Còn lại online: 0
+2026-11-02 13:31:51,610 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: steve
+2026-11-02 13:31:51,610 [INFO] [ClientHandler] [-] Đã giải phóng hoàn tất luồng phục vụ Client: alice

@@ -1,0 +1,186 @@
+2026-11-01 23:08:56,270 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:08:56,272 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:08:56,272 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 64762
+2026-11-01 23:08:56,274 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 64763
+2026-11-01 23:08:56,275 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:08:56,275 [INFO] [ClientMain] ============================================================
+2026-11-01 23:08:56,276 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5002
+2026-11-01 23:08:56,276 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5002
+2026-11-01 23:08:56,276 [INFO] [ClientMain] ============================================================
+2026-11-01 23:09:12,747 [INFO] [CoreClient] [✓] Đăng ký tài khoản thành công!
+2026-11-01 23:09:15,049 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:09:15,051 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:09:15,054 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:10:15,221 [INFO] [ClientMain] [!] Đang đóng ứng dụng...
+2026-11-01 23:10:18,849 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:10:18,851 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:10:18,852 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 61754
+2026-11-01 23:10:18,853 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 61755
+2026-11-01 23:10:18,855 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:10:18,855 [INFO] [ClientMain] ============================================================
+2026-11-01 23:10:18,857 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5001
+2026-11-01 23:10:18,858 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5001
+2026-11-01 23:10:18,858 [INFO] [ClientMain] ============================================================
+2026-11-01 23:11:04,802 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:11:04,803 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:11:04,805 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:11:58,028 [ERROR] [CoreClient] [X] Đăng nhập thất bại: Tài khoản 'steve' đang đăng nhập ở thiết bị khác!
+2026-11-01 23:12:49,127 [INFO] [ClientMain] [!] Đang đóng ứng dụng...
+2026-11-01 23:12:51,655 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:12:51,657 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:12:51,658 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 49984
+2026-11-01 23:12:51,659 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 49985
+2026-11-01 23:12:51,661 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:12:51,662 [INFO] [ClientMain] ============================================================
+2026-11-01 23:12:51,662 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5002
+2026-11-01 23:12:51,662 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5002
+2026-11-01 23:12:51,663 [INFO] [ClientMain] ============================================================
+2026-11-01 23:13:02,669 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:13:02,670 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:13:02,672 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:14:50,512 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:14:50,514 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:14:50,514 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 60908
+2026-11-01 23:14:50,516 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 60909
+2026-11-01 23:14:50,517 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:14:50,517 [INFO] [ClientMain] ============================================================
+2026-11-01 23:14:50,517 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5001
+2026-11-01 23:14:50,518 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5001
+2026-11-01 23:14:50,518 [INFO] [ClientMain] ============================================================
+2026-11-01 23:15:03,174 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:15:03,175 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:15:03,175 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:17:45,252 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:17:45,254 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:17:45,254 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 55130
+2026-11-01 23:17:45,256 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 55131
+2026-11-01 23:17:45,257 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:17:45,257 [INFO] [ClientMain] ============================================================
+2026-11-01 23:17:45,257 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5002
+2026-11-01 23:17:45,257 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5002
+2026-11-01 23:17:45,258 [INFO] [ClientMain] ============================================================
+2026-11-01 23:18:01,696 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:18:01,697 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:18:01,698 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:43:30,258 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:43:30,260 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:43:30,261 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 54367
+2026-11-01 23:43:30,263 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 54368
+2026-11-01 23:43:30,264 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:43:30,264 [INFO] [ClientMain] ============================================================
+2026-11-01 23:43:30,264 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5000
+2026-11-01 23:43:30,265 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5000
+2026-11-01 23:43:30,265 [INFO] [ClientMain] ============================================================
+2026-11-01 23:43:35,158 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:43:35,160 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:43:35,160 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 63604
+2026-11-01 23:43:35,162 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 63605
+2026-11-01 23:43:35,164 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:43:35,164 [INFO] [ClientMain] ============================================================
+2026-11-01 23:43:35,165 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5001
+2026-11-01 23:43:35,165 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5001
+2026-11-01 23:43:35,165 [INFO] [ClientMain] ============================================================
+2026-11-01 23:43:45,413 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:43:45,415 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:43:45,415 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 53594
+2026-11-01 23:43:45,417 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 53595
+2026-11-01 23:43:45,418 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:43:45,419 [INFO] [ClientMain] ============================================================
+2026-11-01 23:43:45,419 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5002
+2026-11-01 23:43:45,419 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5002
+2026-11-01 23:43:45,419 [INFO] [ClientMain] ============================================================
+2026-11-01 23:43:53,741 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:43:53,744 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:43:53,749 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:44:02,452 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:44:02,453 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:44:02,455 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:44:19,851 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:44:19,854 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:44:19,855 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:47:17,499 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:47:17,501 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:47:17,503 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 57921
+2026-11-01 23:47:17,504 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 57922
+2026-11-01 23:47:17,506 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:47:17,507 [INFO] [ClientMain] ============================================================
+2026-11-01 23:47:17,507 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5000
+2026-11-01 23:47:17,507 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5000
+2026-11-01 23:47:17,508 [INFO] [ClientMain] ============================================================
+2026-11-01 23:47:26,036 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:47:26,037 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:47:26,038 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:47:31,490 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:47:31,493 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:47:31,493 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 62788
+2026-11-01 23:47:31,495 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 62789
+2026-11-01 23:47:31,496 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:47:31,496 [INFO] [ClientMain] ============================================================
+2026-11-01 23:47:31,496 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5001
+2026-11-01 23:47:31,497 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5001
+2026-11-01 23:47:31,497 [INFO] [ClientMain] ============================================================
+2026-11-01 23:47:48,615 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:47:48,616 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:47:48,617 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:48:32,798 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:48:32,800 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:48:32,801 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 63499
+2026-11-01 23:48:32,806 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 63500
+2026-11-01 23:48:32,807 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:48:32,807 [INFO] [ClientMain] ============================================================
+2026-11-01 23:48:32,807 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5001
+2026-11-01 23:48:32,807 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5001
+2026-11-01 23:48:32,808 [INFO] [ClientMain] ============================================================
+2026-11-01 23:48:40,872 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:48:40,873 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:48:40,875 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-01 23:49:08,912 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-01 23:49:08,913 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-01 23:49:08,914 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 55334
+2026-11-01 23:49:08,915 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 55335
+2026-11-01 23:49:08,916 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-01 23:49:08,917 [INFO] [ClientMain] ============================================================
+2026-11-01 23:49:08,917 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5002
+2026-11-01 23:49:08,917 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5002
+2026-11-01 23:49:08,917 [INFO] [ClientMain] ============================================================
+2026-11-01 23:49:15,612 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-01 23:49:15,613 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-01 23:49:15,616 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-02 08:27:48,764 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-02 08:27:48,767 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-02 08:27:48,768 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 61094
+2026-11-02 08:27:48,769 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 61095
+2026-11-02 08:27:48,770 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-02 08:27:48,771 [INFO] [ClientMain] ============================================================
+2026-11-02 08:27:48,771 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5000
+2026-11-02 08:27:48,771 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5000
+2026-11-02 08:27:48,772 [INFO] [ClientMain] ============================================================
+2026-11-02 08:27:52,868 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-02 08:27:52,870 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-02 08:27:52,871 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 64438
+2026-11-02 08:27:52,872 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 64439
+2026-11-02 08:27:52,873 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-02 08:27:52,873 [INFO] [ClientMain] ============================================================
+2026-11-02 08:27:52,874 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5001
+2026-11-02 08:27:52,874 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5001
+2026-11-02 08:27:52,874 [INFO] [ClientMain] ============================================================
+2026-11-02 08:27:57,871 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 127.0.0.1:8888...
+2026-11-02 08:27:57,873 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 127.0.0.1:8888
+2026-11-02 08:27:57,876 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 56770
+2026-11-02 08:27:57,880 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 56771
+2026-11-02 08:27:57,882 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-02 08:27:57,883 [INFO] [ClientMain] ============================================================
+2026-11-02 08:27:57,884 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5002
+2026-11-02 08:27:57,885 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5002
+2026-11-02 08:27:57,885 [INFO] [ClientMain] ============================================================
+2026-11-02 08:30:22,389 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-02 08:30:22,390 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-02 08:30:22,399 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-02 08:30:28,891 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-02 08:30:28,893 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-02 08:30:28,902 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-02 08:30:42,853 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-02 08:30:42,855 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('127.0.0.1', 8890)
+2026-11-02 08:30:42,857 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-02 13:31:51,563 [ERROR] [CoreClient] [Heartbeat UDP] Mất kết nối tới Server: Quá 15.0s không nhận được UDP PONG!
+2026-11-02 13:31:51,563 [ERROR] [CoreClient] [Heartbeat UDP] Mất kết nối tới Server: Quá 15.0s không nhận được UDP PONG!

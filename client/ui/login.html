@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Xác thực - MMT261</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="auth-body">
+    <div class="auth-container">
+      <h2 class="auth-title">HCMUT MMT261</h2>
+      <div class="tabs">
+        <button
+          class="tab-btn active"
+          id="tab-login"
+          onclick="switchTab('login')"
+        >
+          Đăng Nhập
+        </button>
+        <button
+          class="tab-btn"
+          id="tab-register"
+          onclick="switchTab('register')"
+        >
+          Đăng Ký
+        </button>
+      </div>
+      <form class="auth-form" id="auth-form" onsubmit="handleAuth(event)">
+        <input
+          type="text"
+          id="username"
+          placeholder="Tên người dùng"
+          required
+        />
+        <input type="password" id="password" placeholder="Mật khẩu" required />
+        <button type="submit" class="primary-btn" id="submit-btn">
+          Đăng Nhập
+        </button>
+      </form>
+      <div id="auth-msg" class="message"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

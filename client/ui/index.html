@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Workspace - MMT261</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="app-body">
+    <header class="app-header">
+      <div class="logo">HCMUT | Mạng Phân Tán</div>
+      <div class="user-info">
+        User: <span id="current-user-display">...</span>
+      </div>
+    </header>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div
+          class="room-btn active"
+          id="peer-__BROADCAST__"
+          onclick="selectTarget('__BROADCAST__')"
+        >
+          Phòng Chat Chung
+        </div>
+        <h3>ONLINE PEERS</h3>
+        <div class="peer-list" id="user-list"></div>
+      </aside>
+      <main class="chat-area">
+        <header class="chat-header">
+          <h2 id="chat-title">Phòng Chat Chung</h2>
+        </header>
+        <div class="messages" id="chat-messages"></div>
+        <div class="chat-input-area">
+          <input
+            type="text"
+            id="msg-input"
+            placeholder="Nhập tin nhắn..."
+            onkeypress="if (event.key === 'Enter') sendMessage();"
+          />
+          <button class="primary-btn" onclick="sendMessage()">Gửi</button>
+          <input
+            type="file"
+            id="file-input"
+            style="display: none"
+            onchange="sendFile()"
+          />
+          <button
+            class="secondary-btn"
+            onclick="document.getElementById('file-input').click()"
+          >
+            Gửi File
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <!-- Popup nhận file -->
+    <div id="file-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3 style="color: var(--bk-dark)">Yêu cầu nhận file</h3>
+        <p id="file-modal-desc" style="margin-top: 10px"></p>
+        <div class="modal-actions">
+          <button class="primary-btn" onclick="respondFile(true)">
+            Chấp nhận
+          </button>
+          <button class="secondary-btn" onclick="respondFile(false)">
+            Từ chối
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thanh tiến trình UDP -->
+    <div id="progress-box" class="progress-box hidden">
+      <div
+        class="progress-info"
+        id="progress-text"
+        style="font-weight: bold; color: var(--bk-dark)"
+      >
+        Đang xử lý...
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="progress-detail" id="progress-detail">Chunk 0 / 0</div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
