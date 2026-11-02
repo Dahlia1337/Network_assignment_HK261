@@ -1,8 +1,10 @@
-﻿let currentMode = 'login'; // Auth state
+let currentMode = 'login'; // Auth state
 let currentTarget = '__BROADCAST__';
 let currentUser = sessionStorage.getItem('username') || '';
+let unreadBroadcast = false; // Trạng thái tin chưa đọc phòng Broadcast
 let pendingTransferId = '';
-const unreadUsers = new Set();
+const unreadUsers = new Set(); // Tập hợp username có tin nhắn riêng chưa đọc
+
 const authForm = document.getElementById('auth-form');
 const chatMessages = document.getElementById('chat-messages');
 
@@ -45,39 +47,32 @@ evtSource.addEventListener('register_result', (e) => {
 });
 
 evtSource.addEventListener('user_list_updated', (e) => {
-    if (!chatMessages) return;
     const users = JSON.parse(e.data).users;
-    const list = document.getElementById('user-list');
-    list.innerHTML = '';
-    users.forEach(u => {
-        // Trích xuất username nếu u là object
-        const username = typeof u === 'object' && u !== null ? u.username : u;
-        if (username === currentUser) return;
-
-        const div = document.createElement('div');
-        div.className = `peer-item ${currentTarget === username ? 'active' : ''}`;
-        div.id = `peer-${username}`;
-        div.innerText = username;
-        div.onclick = () => selectTarget(username);
-        list.appendChild(div);
-        if (unreadUsers.has(username)) {
-            const dot = document.createElement('span');
-            dot.className = 'unread-dot';
-            div.appendChild(dot);
-        }
-    });
+    renderUserList(users);
 });
 
 evtSource.addEventListener('message_received', (e) => {
     if (!chatMessages) return;
     const data = JSON.parse(e.data);
     const isBroadcast = !data.is_private;
+    
+    // Xác định đối tượng của tin nhắn này
     const intendedTarget = isBroadcast ? '__BROADCAST__' : (data.sender === currentUser ? data.target : data.sender);
     
+    // Nếu đang mở đúng tab hội thoại đó
     if (currentTarget === intendedTarget) {
-        appendMessage(data.sender, data.text, data.sender === currentUser ? 'self' : 'other');
+        if (data.sender !== currentUser) {
+            appendMessage(data.sender, data.text, 'other');
+        }
     } else {
-        unreadUsers.add(intendedTarget);
+        // Cập nhật bộ nhớ chưa đọc
+        if (isBroadcast) {
+            unreadBroadcast = true;
+        } else {
+            unreadUsers.add(intendedTarget);
+        }
+
+        // Vẽ chấm đỏ lên giao diện
         const peerElement = document.getElementById(`peer-${intendedTarget}`);
         if (peerElement && !peerElement.querySelector('.unread-dot')) {
             const dot = document.createElement('span');
@@ -111,7 +106,6 @@ evtSource.addEventListener('file_progress', (e) => {
     document.getElementById('progress-text').innerText = data.is_upload ? '📤 Đang tải lên...' : '📥 Đang tải về...';
     document.getElementById('progress-bar').style.width = `${data.percent}%`;
     
-    // Chunk count display logic
     if (data.total_chunks) {
         document.getElementById('progress-detail').innerText = `Chunk ${data.current_chunk || Math.floor(data.total_chunks * data.percent / 100)} / ${data.total_chunks}`;
     } else {
@@ -160,12 +154,18 @@ function selectTarget(target) {
     document.querySelectorAll('.room-btn, .peer-item').forEach(el => el.classList.remove('active'));
     
     const targetElement = document.getElementById(`peer-${target}`);
-    targetElement.classList.add('active');
-    
-    unreadUsers.delete(target); 
-    // Xóa dấu chấm đỏ báo tin nhắn mới
-    const dot = targetElement.querySelector('.unread-dot');
-    if (dot) dot.remove();
+    if (targetElement) {
+        targetElement.classList.add('active');
+        const dot = targetElement.querySelector('.unread-dot');
+        if (dot) dot.remove();
+    }
+
+    // Xóa trạng thái chưa đọc
+    if (target === '__BROADCAST__') {
+        unreadBroadcast = false;
+    } else {
+        unreadUsers.delete(target);
+    }
 
     document.getElementById('chat-title').innerText = target === '__BROADCAST__' ? 'Phòng Chat Chung' : `Chat riêng với: ${target}`;
     
@@ -181,13 +181,9 @@ async function sendMessage() {
     const text = input.value.trim();
     if (!text) return;
     
-    // 1. Hiển thị ngay lập tức tin nhắn của chính mình lên giao diện (màu xanh bên phải)
     appendMessage(currentUser || 'Tôi', text, 'self');
-    
-    // 2. Xóa ô nhập tin nhắn
     input.value = '';
     
-    // 3. Gửi tin nhắn qua Web Gateway tới Server
     try {
         await fetch('/api/send_message', {
             method: 'POST',
@@ -218,21 +214,38 @@ function renderUserList(users) {
     if (!list) return;
     list.innerHTML = '';
     
+    // Render danh sách User Online
     users.forEach(u => {
         const username = typeof u === 'object' && u !== null ? u.username : u;
         if (username === currentUser) return;
+        
         const div = document.createElement('div');
         div.className = `peer-item ${currentTarget === username ? 'active' : ''}`;
         div.id = `peer-${username}`;
         div.innerText = username;
+        
         if (unreadUsers.has(username)) {
             const dot = document.createElement('span');
             dot.className = 'unread-dot';
             div.appendChild(dot);
         }
+        
         div.onclick = () => selectTarget(username);
         list.appendChild(div);
     });
+
+    // Cập nhật chấm đỏ cho Phòng Chat Chung
+    const broadcastDiv = document.getElementById('peer-__BROADCAST__');
+    if (broadcastDiv) {
+        const existingDot = broadcastDiv.querySelector('.unread-dot');
+        if (unreadBroadcast && !existingDot) {
+            const dot = document.createElement('span');
+            dot.className = 'unread-dot';
+            broadcastDiv.appendChild(dot);
+        } else if (!unreadBroadcast && existingDot) {
+            existingDot.remove();
+        }
+    }
 }
 
 async function loadUserList() {
