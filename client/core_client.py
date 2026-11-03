@@ -99,6 +99,54 @@ class CollaborationClient:
         """
         return hashlib.sha256(password.encode("utf-8")).hexdigest()
 
+    def discover_server(self, timeout: float = 3.0, udp_port: int = DEFAULT_UDP_PORT) -> Tuple[Optional[str], Optional[int]]:
+        """
+        Tự động khám phá máy chủ (Auto-Discovery) qua UDP Broadcast trong mạng LAN.
+        Gửi gói tin 'DISCOVER_COLLAB_SERVER' tới cổng DEFAULT_UDP_PORT (8889)
+        và chờ phản hồi 'COLLAB_SERVER_OFFER:<tcp_port>'.
+
+        :param timeout: Thời gian tối đa chờ phản hồi (giây).
+        :param udp_port: Cổng UDP Discovery của máy chủ (mặc định: DEFAULT_UDP_PORT).
+        :return: Tuple (server_ip, server_tcp_port) hoặc (None, None) nếu thất bại / timeout.
+        """
+        sock = None
+        try:
+            sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+            sock.settimeout(timeout)
+
+            logger.info(f"[UDP Discovery] Đang gửi broadcast tìm máy chủ trên cổng {udp_port} (timeout={timeout}s)...")
+            message = "DISCOVER_COLLAB_SERVER".encode("utf-8")
+            sock.sendto(message, ("<broadcast>", udp_port))
+
+            start_time = time.time()
+            while True:
+                remaining = timeout - (time.time() - start_time)
+                if remaining <= 0:
+                    break
+                sock.settimeout(remaining)
+                data, addr = sock.recvfrom(1024)
+                payload = data.decode("utf-8", errors="ignore").strip()
+
+                if payload.startswith("COLLAB_SERVER_OFFER:"):
+                    server_ip = addr[0]
+                    server_tcp_port = int(payload.split(":")[1])
+                    logger.info(f"[UDP Discovery] Phát hiện máy chủ tại {server_ip}:{server_tcp_port}")
+                    return server_ip, server_tcp_port
+
+        except (socket.timeout, OSError) as e:
+            logger.debug(f"[UDP Discovery] Không nhận được phản hồi qua UDP Broadcast ({e})")
+        except Exception as e:
+            logger.warning(f"[UDP Discovery] Lỗi trong quá trình khám phá máy chủ: {e}")
+        finally:
+            if sock:
+                try:
+                    sock.close()
+                except Exception:
+                    pass
+
+        return None, None
+
     def connect(
         self,
         host: str = DEFAULT_HOST,

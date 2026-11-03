@@ -36,7 +36,7 @@ UDP_HEADER_FORMAT: str = "!HH8sIII"
 UDP_HEADER_SIZE: int = 24
 
 # ==================== CẤU HÌNH MẠNG (NETWORK CONFIGURATION) ====================
-DEFAULT_HOST: str = "127.0.0.1"
+DEFAULT_HOST: str = "0.0.0.0"
 DEFAULT_TCP_PORT: int = 8888
 DEFAULT_UDP_PORT: int = 8889
 DEFAULT_UDP_FILE_PORT: int = 8890
