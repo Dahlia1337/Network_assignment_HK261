@@ -1,0 +1,16 @@
+2026-11-04 21:57:42,385 [INFO] [CoreServer] [Session Cleaner] Luồng dọn dẹp phiên chết đã khởi động (chu kỳ 3s, timeout 15.0s)
+2026-11-04 21:57:42,385 [INFO] [CoreServer] [UDP File Router] Đang lắng nghe file streaming tại cổng UDP 8890
+2026-11-04 21:57:42,386 [INFO] [CoreServer] [UDP] Discovery & Heartbeat service đang hoạt động trên cổng UDP 8889
+2026-11-04 21:57:42,386 [INFO] [CoreServer] [TCP] Server đang lắng nghe tại 0.0.0.0:8888 (Sẵn sàng phục vụ)
+2026-11-04 21:58:05,234 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 172.25.176.1:61364
+2026-11-04 21:58:14,570 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'alice'
+2026-11-04 21:58:14,571 [INFO] [SessionManager] [+] User 'alice' đã đăng nhập từ 172.25.176.1:61364. Tổng online: 1
+2026-11-04 21:58:14,572 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'alice': 172.25.176.1:59508
+2026-11-04 21:58:14,573 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'alice' tại 172.25.176.1:59508
+2026-11-04 21:58:26,572 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 172.25.176.1:61389
+2026-11-04 21:58:31,752 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'bob'
+2026-11-04 21:58:31,752 [INFO] [SessionManager] [+] User 'bob' đã đăng nhập từ 172.25.176.1:61389. Tổng online: 2
+2026-11-04 21:58:31,754 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'bob': 172.25.176.1:65038
+2026-11-04 21:58:31,754 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'bob' tại 172.25.176.1:65038
+2026-11-04 21:59:31,141 [INFO] [FileRouter] [File] Khởi tạo phiên truyền 'DS_L05_Group07_Lab4.pdf' (581174 bytes) từ bob -> alice [ID: 48b1f25b]
+2026-11-04 21:59:35,270 [INFO] [FileRouter] [File] Hoàn tất thành công truyền file 'DS_L05_Group07_Lab4.pdf' [ID: 48b1f25b]

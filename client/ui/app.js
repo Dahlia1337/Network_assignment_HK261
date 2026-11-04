@@ -261,7 +261,7 @@ function appendFileNotice(info) {
         <div class="file-notice-stats">
             <div>Dung lượng: <b>${filesizeStr}</b></div>
             <div>Số chunk: <b>${totalChunks}</b></div>
-            // <div>Thời gian: <b>${elapsedTime}</b></div>
+            <div>Thời gian: <b>${elapsedTime}</b></div>
             <div>Tốc độ: <b>${speedStr}</b></div>
         </div>
     `;

@@ -1,0 +1,35 @@
+2026-11-04 21:58:05,230 [INFO] [ClientMain] [*] Đang dò tìm máy chủ tự động qua UDP Broadcast...
+2026-11-04 21:58:05,231 [INFO] [CoreClient] [UDP Discovery] Đang gửi broadcast tìm máy chủ trên cổng 8889 (timeout=2.0s)...
+2026-11-04 21:58:05,232 [INFO] [CoreClient] [UDP Discovery] Phát hiện máy chủ tại 172.25.176.1:8888
+2026-11-04 21:58:05,233 [INFO] [ClientMain] [✓] Đã tự động phát hiện Server tại 172.25.176.1:8888 qua UDP Discovery!
+2026-11-04 21:58:05,233 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 172.25.176.1:8888...
+2026-11-04 21:58:05,233 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 172.25.176.1:8888
+2026-11-04 21:58:05,234 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 59507
+2026-11-04 21:58:05,236 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 59508
+2026-11-04 21:58:05,237 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-04 21:58:05,237 [INFO] [ClientMain] ============================================================
+2026-11-04 21:58:05,238 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5000
+2026-11-04 21:58:05,238 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5000
+2026-11-04 21:58:05,239 [INFO] [ClientMain] ============================================================
+2026-11-04 21:58:14,572 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-04 21:58:14,572 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('172.25.176.1', 8890)
+2026-11-04 21:58:14,573 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-04 21:58:26,567 [INFO] [ClientMain] [*] Đang dò tìm máy chủ tự động qua UDP Broadcast...
+2026-11-04 21:58:26,569 [INFO] [CoreClient] [UDP Discovery] Đang gửi broadcast tìm máy chủ trên cổng 8889 (timeout=2.0s)...
+2026-11-04 21:58:26,570 [INFO] [CoreClient] [UDP Discovery] Phát hiện máy chủ tại 172.25.176.1:8888
+2026-11-04 21:58:26,570 [INFO] [ClientMain] [✓] Đã tự động phát hiện Server tại 172.25.176.1:8888 qua UDP Discovery!
+2026-11-04 21:58:26,571 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 172.25.176.1:8888...
+2026-11-04 21:58:26,571 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 172.25.176.1:8888
+2026-11-04 21:58:26,572 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 65037
+2026-11-04 21:58:26,573 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 65038
+2026-11-04 21:58:26,575 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-04 21:58:26,575 [INFO] [ClientMain] ============================================================
+2026-11-04 21:58:26,575 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5001
+2026-11-04 21:58:26,576 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5001
+2026-11-04 21:58:26,576 [INFO] [ClientMain] ============================================================
+2026-11-04 21:58:31,753 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-04 21:58:31,753 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('172.25.176.1', 8890)
+2026-11-04 21:58:31,754 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-04 21:59:34,935 [INFO] [CoreClient] [UDP Sender] Bắt đầu truyền file 'DS_L05_Group07_Lab4.pdf' (581174 bytes, 416 chunks) [ID: 48b1f25b]
+2026-11-04 21:59:35,270 [INFO] [CoreClient] [✓] Hoàn tất 100% truyền file 'DS_L05_Group07_Lab4.pdf' [ID: 48b1f25b]
+2026-11-04 21:59:35,272 [INFO] [CoreClient] [Cleanup] Đã tự động xóa file tạm sau khi gửi xong: D:\destiny\network\btl\btl1\MMT261_2\uploads\DS_L05_Group07_Lab4.pdf
