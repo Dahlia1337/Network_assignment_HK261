@@ -1,5 +1,2 @@
-# Thư viện mã hóa bảo mật tầng Transport/Application
 cryptography>=42.0.0
 
-# (Tùy chọn) Giao diện hiện đại trên nền Tkinter nếu dùng CustomTkinter
-customtkinter>=5.2.0

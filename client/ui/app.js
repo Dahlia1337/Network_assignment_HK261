@@ -256,13 +256,13 @@ function appendFileNotice(info) {
     const div = document.createElement('div');
     div.className = 'msg-bubble msg-sys msg-file-notice';
     div.innerHTML = `
-        <div class="file-notice-header">📁 <span>Truyền file thành công</span></div>
+        <div class="file-notice-header"><span>Truyền file thành công</span></div>
         <div class="file-notice-name">${filename}</div>
         <div class="file-notice-stats">
-            <div>📦 Dung lượng: <b>${filesizeStr}</b></div>
-            <div>🧩 Số chunk: <b>${totalChunks}</b></div>
-            <div>⏱️ Thời gian: <b>${elapsedTime}</b></div>
-            <div>🚀 Tốc độ: <b>${speedStr}</b></div>
+            <div>Dung lượng: <b>${filesizeStr}</b></div>
+            <div>Số chunk: <b>${totalChunks}</b></div>
+            // <div>Thời gian: <b>${elapsedTime}</b></div>
+            <div>Tốc độ: <b>${speedStr}</b></div>
         </div>
     `;
     chatMessages.appendChild(div);

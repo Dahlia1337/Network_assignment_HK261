@@ -13,7 +13,7 @@ import threading
 import time
 import unittest
 
-from common.constants import DEFAULT_HOST, UDP_CHUNK_SIZE
+from common.constants import DEFAULT_HOST, FILE_CHUNK_SIZE
 from common.message_types import MessageType
 from common.protocol import pack_udp_packet, unpack_udp_packet
 from client.file_transfer import FileReceiver, FileSender, calculate_sha256

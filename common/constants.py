@@ -44,9 +44,8 @@ DEFAULT_UDP_FILE_PORT: int = 8890
 # Kích thước bộ đệm socket đọc/ghi (Bytes)
 SOCKET_RECV_BUFFER_SIZE: int = 4096
 
-# Kích thước mỗi khối file khi phân mảnh TCP (32 KB) và UDP (1400 Bytes tránh IP Fragmentation)
-FILE_CHUNK_SIZE: int = 32 * 1024
-UDP_CHUNK_SIZE: int = 1400
+# Kích thước mỗi khối file khi phân mảnh UDP (1400 Bytes tránh IP Fragmentation)
+FILE_CHUNK_SIZE: int = 1400
 
 # Cấu hình UDP Reliable ARQ (Selective Repeat)
 UDP_ACK_TIMEOUT: float = 0.1      # 100ms

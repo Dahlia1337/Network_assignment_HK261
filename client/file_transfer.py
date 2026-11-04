@@ -8,7 +8,7 @@ import hashlib
 import os
 from typing import Callable, Dict, Optional, Set, Tuple
 
-from common.constants import FILE_CHUNK_SIZE, UDP_CHUNK_SIZE
+from common.constants import FILE_CHUNK_SIZE
 
 
 def calculate_sha256(filepath: str) -> str:
@@ -28,7 +28,7 @@ class FileSender:
     Quản lý việc đọc file, phân mảnh nhị phân thô và phục vụ các chunk cho UDP streaming.
     """
 
-    def __init__(self, filepath: str, chunk_size: int = UDP_CHUNK_SIZE):
+    def __init__(self, filepath: str, chunk_size: int = FILE_CHUNK_SIZE):
         if not os.path.exists(filepath):
             raise FileNotFoundError(f"Không tìm thấy file: {filepath}")
 

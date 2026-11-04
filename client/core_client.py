@@ -20,7 +20,7 @@ from common.constants import (
     HEARTBEAT_TIMEOUT,
     SOCKET_RECV_BUFFER_SIZE,
     UDP_ACK_TIMEOUT,
-    UDP_CHUNK_SIZE,
+    FILE_CHUNK_SIZE,
     UDP_MAX_RETRIES,
     UDP_WINDOW_SIZE,
 )
@@ -528,7 +528,7 @@ class CollaborationClient:
         """
         try:
             start_time = time.time()
-            sender = FileSender(filepath, chunk_size=UDP_CHUNK_SIZE)
+            sender = FileSender(filepath, chunk_size=FILE_CHUNK_SIZE)
             total_chunks = sender.total_chunks
             target_user = self._file_targets.get(sender.filename, "")
             logger.info(f"[UDP Sender] Bắt đầu truyền file '{sender.filename}' ({sender.filesize} bytes, {total_chunks} chunks) [ID: {transfer_id}]")
