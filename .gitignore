@@ -1,2 +1,7 @@
 client.log
 server.log
+.venv/
+venv/
+__pycache__/
+uploads
+downloads

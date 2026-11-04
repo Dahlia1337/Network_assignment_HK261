@@ -36,3 +36,19 @@
 2026-11-02 20:24:37,463 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
 2026-11-02 20:28:12,826 [INFO] [CoreClient] [UDP Sender] Bắt đầu truyền file 'L10_91_2313916_LAB1_30-10-2023.pdf' (242682 bytes, 174 chunks) [ID: 4863dbe7]
 2026-11-02 20:28:12,957 [INFO] [CoreClient] [✓] Hoàn tất 100% truyền file 'L10_91_2313916_LAB1_30-10-2023.pdf' [ID: 4863dbe7]
+2026-11-04 07:19:13,071 [INFO] [ClientMain] [*] Đang dò tìm máy chủ tự động qua UDP Broadcast...
+2026-11-04 07:19:13,073 [INFO] [CoreClient] [UDP Discovery] Đang gửi broadcast tìm máy chủ trên cổng 8889 (timeout=2.0s)...
+2026-11-04 07:19:13,074 [INFO] [CoreClient] [UDP Discovery] Phát hiện máy chủ tại 172.25.176.1:8888
+2026-11-04 07:19:13,074 [INFO] [ClientMain] [✓] Đã tự động phát hiện Server tại 172.25.176.1:8888 qua UDP Discovery!
+2026-11-04 07:19:13,074 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 172.25.176.1:8888...
+2026-11-04 07:19:13,075 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 172.25.176.1:8888
+2026-11-04 07:19:13,075 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 60110
+2026-11-04 07:19:13,078 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 60111
+2026-11-04 07:19:13,079 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-04 07:19:13,080 [INFO] [ClientMain] ============================================================
+2026-11-04 07:19:13,080 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5000
+2026-11-04 07:19:13,080 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5000
+2026-11-04 07:19:13,081 [INFO] [ClientMain] ============================================================
+2026-11-04 07:21:19,675 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-04 07:21:19,676 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('172.25.176.1', 8890)
+2026-11-04 07:21:19,678 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)

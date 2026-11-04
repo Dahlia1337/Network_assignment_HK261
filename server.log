@@ -19,3 +19,12 @@
 2026-11-02 20:24:37,462 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'steve' tại 127.0.0.1:52306
 2026-11-02 20:28:07,012 [INFO] [FileRouter] [File] Khởi tạo phiên truyền 'L10_91_2313916_LAB1_30-10-2023.pdf' (242682 bytes) từ alice -> bob [ID: 4863dbe7]
 2026-11-02 20:28:12,957 [INFO] [FileRouter] [File] Hoàn tất thành công truyền file 'L10_91_2313916_LAB1_30-10-2023.pdf' [ID: 4863dbe7]
+2026-11-04 07:18:57,971 [INFO] [CoreServer] [Session Cleaner] Luồng dọn dẹp phiên chết đã khởi động (chu kỳ 3s, timeout 15.0s)
+2026-11-04 07:18:57,971 [INFO] [CoreServer] [UDP File Router] Đang lắng nghe file streaming tại cổng UDP 8890
+2026-11-04 07:18:57,971 [INFO] [CoreServer] [UDP] Discovery & Heartbeat service đang hoạt động trên cổng UDP 8889
+2026-11-04 07:18:57,972 [INFO] [CoreServer] [TCP] Server đang lắng nghe tại 0.0.0.0:8888 (Sẵn sàng phục vụ)
+2026-11-04 07:19:13,075 [INFO] [ClientHandler] [*] Bắt đầu phục vụ kết nối mới từ 172.25.176.1:56629
+2026-11-04 07:21:19,674 [INFO] [UserManager] [Auth] Xác thực thành công cho tài khoản: 'alice'
+2026-11-04 07:21:19,674 [INFO] [SessionManager] [+] User 'alice' đã đăng nhập từ 172.25.176.1:56629. Tổng online: 1
+2026-11-04 07:21:19,676 [INFO] [SessionManager] [UDP] Đã đăng ký địa chỉ UDP cho user 'alice': 172.25.176.1:60111
+2026-11-04 07:21:19,678 [INFO] [FileRouter] [UDP Router] Ghi nhận UDP endpoint của 'alice' tại 172.25.176.1:60111
