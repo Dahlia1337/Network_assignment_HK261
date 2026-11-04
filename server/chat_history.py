@@ -69,6 +69,58 @@ class ChatHistoryManager:
             self._direct_histories[key].append(msg)
         return msg
 
+    def add_file_message(
+        self,
+        sender: str,
+        target: str,
+        filename: str,
+        filesize: int,
+        total_chunks: int,
+        elapsed_time: float,
+        timestamp: str
+    ) -> dict:
+        """
+        Lưu thông tin lịch sử truyền file giữa hai người dùng.
+        """
+        if filesize < 1024:
+            size_str = f"{filesize} B"
+        elif filesize < 1024 * 1024:
+            size_str = f"{filesize / 1024:.1f} KB"
+        else:
+            size_str = f"{filesize / (1024 * 1024):.2f} MB"
+
+        speed_kbps = round((filesize / 1024) / elapsed_time, 2) if elapsed_time > 0 else 0
+        if speed_kbps >= 1024:
+            speed_str = f"{speed_kbps / 1024:.2f} MB/s"
+        else:
+            speed_str = f"{speed_kbps:.1f} KB/s"
+
+        text = f"📁 [File] {filename} ({size_str}) | {total_chunks} chunks | {elapsed_time}s ({speed_str})"
+
+        msg = {
+            "sender": sender,
+            "target": target,
+            "text": text,
+            "timestamp": timestamp,
+            "is_private": True,
+            "type": "file",
+            "file_info": {
+                "filename": filename,
+                "filesize": filesize,
+                "filesize_str": size_str,
+                "total_chunks": total_chunks,
+                "elapsed_time": elapsed_time,
+                "speed_str": speed_str,
+                "speed_kbps": speed_kbps,
+                "sender": sender,
+                "target": target
+            }
+        }
+        key = self._get_direct_key(sender, target)
+        with self._lock:
+            self._direct_histories[key].append(msg)
+        return msg
+
     def get_history(self, requester: str, target: str) -> List[dict]:
         """
         Lấy danh sách tin nhắn lịch sử theo yêu cầu của requester.

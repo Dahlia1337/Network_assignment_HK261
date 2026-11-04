@@ -52,3 +52,161 @@
 2026-11-04 07:21:19,675 [INFO] [CoreClient] [✓] Đăng nhập thành công!
 2026-11-04 07:21:19,676 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('172.25.176.1', 8890)
 2026-11-04 07:21:19,678 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-04 09:14:15,581 [INFO] [ClientMain] [*] Đang dò tìm máy chủ tự động qua UDP Broadcast...
+2026-11-04 09:14:15,581 [INFO] [CoreClient] [UDP Discovery] Đang gửi broadcast tìm máy chủ trên cổng 8889 (timeout=2.0s)...
+2026-11-04 09:14:15,581 [INFO] [CoreClient] [UDP Discovery] Phát hiện máy chủ tại 172.25.176.1:8888
+2026-11-04 09:14:15,581 [INFO] [ClientMain] [✓] Đã tự động phát hiện Server tại 172.25.176.1:8888 qua UDP Discovery!
+2026-11-04 09:14:15,581 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 172.25.176.1:8888...
+2026-11-04 09:14:15,581 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 172.25.176.1:8888
+2026-11-04 09:14:15,581 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 62448
+2026-11-04 09:14:15,581 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 62449
+2026-11-04 09:14:15,608 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-04 09:14:15,609 [INFO] [ClientMain] ============================================================
+2026-11-04 09:14:15,609 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5000
+2026-11-04 09:14:15,609 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5000
+2026-11-04 09:14:15,609 [INFO] [ClientMain] ============================================================
+2026-11-04 09:20:11,100 [INFO] [ClientMain] [*] Đang dò tìm máy chủ tự động qua UDP Broadcast...
+2026-11-04 09:20:11,100 [INFO] [CoreClient] [UDP Discovery] Đang gửi broadcast tìm máy chủ trên cổng 8889 (timeout=2.0s)...
+2026-11-04 09:20:11,115 [INFO] [CoreClient] [UDP Discovery] Phát hiện máy chủ tại 172.25.176.1:8888
+2026-11-04 09:20:11,115 [INFO] [ClientMain] [✓] Đã tự động phát hiện Server tại 172.25.176.1:8888 qua UDP Discovery!
+2026-11-04 09:20:11,115 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 172.25.176.1:8888...
+2026-11-04 09:20:11,115 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 172.25.176.1:8888
+2026-11-04 09:20:11,115 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 63997
+2026-11-04 09:20:11,119 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 63998
+2026-11-04 09:20:11,119 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-04 09:20:11,119 [INFO] [ClientMain] ============================================================
+2026-11-04 09:20:11,120 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5001
+2026-11-04 09:20:11,121 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5001
+2026-11-04 09:20:11,121 [INFO] [ClientMain] ============================================================
+2026-11-04 09:21:11,322 [INFO] [ClientMain] [*] Đang dò tìm máy chủ tự động qua UDP Broadcast...
+2026-11-04 09:21:11,322 [INFO] [CoreClient] [UDP Discovery] Đang gửi broadcast tìm máy chủ trên cổng 8889 (timeout=2.0s)...
+2026-11-04 09:21:11,322 [INFO] [CoreClient] [UDP Discovery] Phát hiện máy chủ tại 172.25.176.1:8888
+2026-11-04 09:21:11,322 [INFO] [ClientMain] [✓] Đã tự động phát hiện Server tại 172.25.176.1:8888 qua UDP Discovery!
+2026-11-04 09:21:11,322 [INFO] [ClientMain] [*] Đang kết nối mạng nền tới Server 172.25.176.1:8888...
+2026-11-04 09:21:11,322 [INFO] [CoreClient] [*] Kết nối TCP thành công đến Server 172.25.176.1:8888
+2026-11-04 09:21:11,322 [INFO] [CoreClient] [UDP] Khởi tạo UDP heartbeat socket tại cổng local 58562
+2026-11-04 09:21:11,322 [INFO] [CoreClient] [UDP] Khởi tạo UDP file socket tại cổng local 58563
+2026-11-04 09:21:11,336 [INFO] [ClientMain] [✓] Kết nối Socket thành công! Chờ người dùng đăng nhập qua Web UI...
+2026-11-04 09:21:11,337 [INFO] [ClientMain] ============================================================
+2026-11-04 09:21:11,337 [INFO] [ClientMain] 🚀 GIAO DIỆN WEB SẴN SÀNG TẠI: http://127.0.0.1:5001
+2026-11-04 09:21:11,338 [INFO] [ClientMain] 🌐 TRUY CẬP TỪ MẠNG LAN: http://<IP_MÁY_NÀY>:5001
+2026-11-04 09:21:11,338 [INFO] [ClientMain] ============================================================
+2026-11-04 09:22:16,442 [ERROR] [CoreClient] [X] Đăng nhập thất bại: Tài khoản không tồn tại!
+2026-11-04 09:22:19,848 [INFO] [CoreClient] [✓] Đăng ký tài khoản thành công!
+2026-11-04 09:22:21,696 [ERROR] [CoreClient] [X] Đăng ký thất bại: Tên tài khoản đã được sử dụng!
+2026-11-04 09:22:26,101 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-04 09:22:26,101 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('172.25.176.1', 8890)
+2026-11-04 09:22:26,101 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-04 09:22:37,208 [INFO] [CoreClient] [✓] Đăng nhập thành công!
+2026-11-04 09:22:37,208 [INFO] [CoreClient] [UDP] Đã gửi gói định danh UDP tới Server ('172.25.176.1', 8890)
+2026-11-04 09:22:37,208 [INFO] [CoreClient] [*] Bắt đầu luồng UDP Heartbeat (chu kỳ 5.0s, timeout 15.0s)
+2026-11-04 09:23:14,284 [INFO] [CoreClient] [UDP Sender] Bắt đầu truyền file 'pe4-single-queue_p1.pdf' (1806733 bytes, 1291 chunks) [ID: c425312c]
+2026-11-04 09:23:15,187 [INFO] [CoreClient] [✓] Hoàn tất 100% truyền file 'pe4-single-queue_p1.pdf' [ID: c425312c]
+2026-11-04 09:23:19,198 [INFO] [CoreClient] [UDP Sender] Bắt đầu truyền file 'pe4-single-queue_p1.pdf' (1806733 bytes, 1291 chunks) [ID: ec4478f2]
+2026-11-04 09:23:20,089 [INFO] [CoreClient] [✓] Hoàn tất 100% truyền file 'pe4-single-queue_p1.pdf' [ID: ec4478f2]
+2026-11-04 09:24:03,267 [INFO] [CoreClient] [UDP Sender] Bắt đầu truyền file 'L10_91_2313916_LAB1_30-10-2023.pdf' (242682 bytes, 174 chunks) [ID: 00c643da]
+2026-11-04 09:24:03,368 [INFO] [CoreClient] [✓] Hoàn tất 100% truyền file 'L10_91_2313916_LAB1_30-10-2023.pdf' [ID: 00c643da]
+2026-11-04 09:31:06,316 [INFO] [CoreClient] [UDP Sender] Bắt đầu truyền file 'DS_L05_Group07_Lab4.pdf' (581174 bytes, 416 chunks) [ID: e08218fe]
+2026-11-04 09:31:06,633 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #23 [ID: e08218fe]
+2026-11-04 09:31:06,634 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #24 [ID: e08218fe]
+2026-11-04 09:31:07,017 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #61 [ID: e08218fe]
+2026-11-04 09:31:07,036 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #62 [ID: e08218fe]
+2026-11-04 09:31:07,038 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #63 [ID: e08218fe]
+2026-11-04 09:31:07,039 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #64 [ID: e08218fe]
+2026-11-04 09:31:07,054 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #65 [ID: e08218fe]
+2026-11-04 09:31:07,133 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #61 [ID: e08218fe]
+2026-11-04 09:31:07,140 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #62 [ID: e08218fe]
+2026-11-04 09:31:07,141 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #63 [ID: e08218fe]
+2026-11-04 09:31:07,142 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #64 [ID: e08218fe]
+2026-11-04 09:31:07,319 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #84 [ID: e08218fe]
+2026-11-04 09:31:07,320 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #85 [ID: e08218fe]
+2026-11-04 09:31:07,321 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #86 [ID: e08218fe]
+2026-11-04 09:31:07,353 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #87 [ID: e08218fe]
+2026-11-04 09:31:07,354 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #88 [ID: e08218fe]
+2026-11-04 09:31:07,436 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #84 [ID: e08218fe]
+2026-11-04 09:31:07,437 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #85 [ID: e08218fe]
+2026-11-04 09:31:07,437 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #86 [ID: e08218fe]
+2026-11-04 09:31:07,467 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #87 [ID: e08218fe]
+2026-11-04 09:31:07,469 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #88 [ID: e08218fe]
+2026-11-04 09:31:07,656 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #105 [ID: e08218fe]
+2026-11-04 09:31:08,051 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #157 [ID: e08218fe]
+2026-11-04 09:31:08,051 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #158 [ID: e08218fe]
+2026-11-04 09:31:08,063 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #160 [ID: e08218fe]
+2026-11-04 09:31:08,064 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #161 [ID: e08218fe]
+2026-11-04 09:31:08,517 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #187 [ID: e08218fe]
+2026-11-04 09:31:08,518 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #188 [ID: e08218fe]
+2026-11-04 09:31:08,519 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #189 [ID: e08218fe]
+2026-11-04 09:31:08,519 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #190 [ID: e08218fe]
+2026-11-04 09:31:08,533 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #191 [ID: e08218fe]
+2026-11-04 09:31:08,798 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #212 [ID: e08218fe]
+2026-11-04 09:31:08,799 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #213 [ID: e08218fe]
+2026-11-04 09:31:08,800 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #214 [ID: e08218fe]
+2026-11-04 09:31:08,818 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #215 [ID: e08218fe]
+2026-11-04 09:31:09,064 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #227 [ID: e08218fe]
+2026-11-04 09:31:09,066 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #228 [ID: e08218fe]
+2026-11-04 09:31:09,082 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #229 [ID: e08218fe]
+2026-11-04 09:31:09,120 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #230 [ID: e08218fe]
+2026-11-04 09:31:09,232 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #232 [ID: e08218fe]
+2026-11-04 09:31:09,232 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #233 [ID: e08218fe]
+2026-11-04 09:31:09,233 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #234 [ID: e08218fe]
+2026-11-04 09:31:09,234 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #235 [ID: e08218fe]
+2026-11-04 09:31:09,235 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #236 [ID: e08218fe]
+2026-11-04 09:31:09,399 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #241 [ID: e08218fe]
+2026-11-04 09:31:09,465 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #242 [ID: e08218fe]
+2026-11-04 09:31:09,465 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #243 [ID: e08218fe]
+2026-11-04 09:31:09,481 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #244 [ID: e08218fe]
+2026-11-04 09:31:09,483 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #245 [ID: e08218fe]
+2026-11-04 09:31:09,511 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #241 [ID: e08218fe]
+2026-11-04 09:31:09,580 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #242 [ID: e08218fe]
+2026-11-04 09:31:09,581 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #243 [ID: e08218fe]
+2026-11-04 09:31:09,601 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #244 [ID: e08218fe]
+2026-11-04 09:31:09,602 [WARNING] [CoreClient] [UDP Sender] Retransmit #2 cho Chunk #245 [ID: e08218fe]
+2026-11-04 09:31:09,798 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #251 [ID: e08218fe]
+2026-11-04 09:31:09,798 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #252 [ID: e08218fe]
+2026-11-04 09:31:09,799 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #253 [ID: e08218fe]
+2026-11-04 09:31:09,800 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #254 [ID: e08218fe]
+2026-11-04 09:31:09,980 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #261 [ID: e08218fe]
+2026-11-04 09:31:09,981 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #262 [ID: e08218fe]
+2026-11-04 09:31:09,982 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #263 [ID: e08218fe]
+2026-11-04 09:31:09,983 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #264 [ID: e08218fe]
+2026-11-04 09:31:09,997 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #265 [ID: e08218fe]
+2026-11-04 09:31:10,245 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #280 [ID: e08218fe]
+2026-11-04 09:31:10,246 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #281 [ID: e08218fe]
+2026-11-04 09:31:10,264 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #282 [ID: e08218fe]
+2026-11-04 09:31:10,297 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #283 [ID: e08218fe]
+2026-11-04 09:31:10,298 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #284 [ID: e08218fe]
+2026-11-04 09:31:10,428 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #285 [ID: e08218fe]
+2026-11-04 09:31:10,429 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #286 [ID: e08218fe]
+2026-11-04 09:31:10,431 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #287 [ID: e08218fe]
+2026-11-04 09:31:10,431 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #288 [ID: e08218fe]
+2026-11-04 09:31:10,432 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #289 [ID: e08218fe]
+2026-11-04 09:31:10,727 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #305 [ID: e08218fe]
+2026-11-04 09:31:10,729 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #306 [ID: e08218fe]
+2026-11-04 09:31:10,730 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #307 [ID: e08218fe]
+2026-11-04 09:31:10,731 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #308 [ID: e08218fe]
+2026-11-04 09:31:10,731 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #309 [ID: e08218fe]
+2026-11-04 09:31:10,944 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #313 [ID: e08218fe]
+2026-11-04 09:31:10,945 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #314 [ID: e08218fe]
+2026-11-04 09:31:11,079 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #318 [ID: e08218fe]
+2026-11-04 09:31:11,079 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #319 [ID: e08218fe]
+2026-11-04 09:31:11,087 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #320 [ID: e08218fe]
+2026-11-04 09:31:11,088 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #321 [ID: e08218fe]
+2026-11-04 09:31:11,462 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #346 [ID: e08218fe]
+2026-11-04 09:31:11,463 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #347 [ID: e08218fe]
+2026-11-04 09:31:11,561 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #348 [ID: e08218fe]
+2026-11-04 09:31:11,562 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #349 [ID: e08218fe]
+2026-11-04 09:31:11,578 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #350 [ID: e08218fe]
+2026-11-04 09:31:12,042 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #382 [ID: e08218fe]
+2026-11-04 09:31:12,100 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #384 [ID: e08218fe]
+2026-11-04 09:31:12,101 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #385 [ID: e08218fe]
+2026-11-04 09:31:12,243 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #396 [ID: e08218fe]
+2026-11-04 09:31:12,258 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #397 [ID: e08218fe]
+2026-11-04 09:31:12,440 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #406 [ID: e08218fe]
+2026-11-04 09:31:12,472 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #407 [ID: e08218fe]
+2026-11-04 09:31:12,473 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #408 [ID: e08218fe]
+2026-11-04 09:31:12,474 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #409 [ID: e08218fe]
+2026-11-04 09:31:12,475 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #410 [ID: e08218fe]
+2026-11-04 09:31:12,592 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #411 [ID: e08218fe]
+2026-11-04 09:31:12,612 [WARNING] [CoreClient] [UDP Sender] Retransmit #1 cho Chunk #412 [ID: e08218fe]
+2026-11-04 09:31:12,613 [INFO] [CoreClient] [✓] Hoàn tất 100% truyền file 'DS_L05_Group07_Lab4.pdf' [ID: e08218fe]
+2026-11-04 09:35:17,514 [ERROR] [CoreClient] [Heartbeat UDP] Mất kết nối tới Server: Quá 15.0s không nhận được UDP PONG!

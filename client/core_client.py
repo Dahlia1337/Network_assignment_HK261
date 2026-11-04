@@ -73,6 +73,7 @@ class CollaborationClient:
         self._udp_listener_thread: Optional[threading.Thread] = None
         self._active_senders_acks: Dict[str, Set[int]] = {}
         self._ack_events: Dict[str, threading.Event] = {}
+        self._file_targets: Dict[str, str] = {}
 
         # Trạng thái các phiên file đang xử lý
         self._active_receivers: Dict[str, FileReceiver] = {}
@@ -88,7 +89,7 @@ class CollaborationClient:
         self.on_chat_history_received: Optional[Callable[[str, List[dict]], None]] = None  # (target, messages)
         self.on_file_request_received: Optional[Callable[[str, str, int, str], None]] = None  # (sender, name, size, id)
         self.on_file_progress: Optional[Callable[[str, float, bool], None]] = None  # (id, percent, is_upload)
-        self.on_file_complete: Optional[Callable[[str, str, str], None]] = None  # (id, name, path)
+        self.on_file_complete: Optional[Callable[..., None]] = None  # (id, name, path, stats)
         self.on_error: Optional[Callable[[str], None]] = None
         self.on_disconnected: Optional[Callable[[], None]] = None
         self.cached_users: List[dict] = []
@@ -270,8 +271,10 @@ class CollaborationClient:
             "filesize": sender.filesize,
             "sha256": sender.sha256,
         }
-        # Lưu đường dẫn để sẵn sàng đẩy chunk khi đối phương đồng ý
+
+        self._file_targets[sender.filename] = target_user
         self._pending_send_files[sender.filename] = filepath
+        
         return send_packet(self.sock, MessageType.FILE_TRANSFER_REQ, payload)
 
     def respond_file_request(self, transfer_id: str, accept: bool, save_dir: str = "./downloads"):
@@ -439,12 +442,20 @@ class CollaborationClient:
 
         elif msg_type == MessageType.FILE_TRANSFER_COMPLETE:
             transfer_id = data.get("transfer_id")
+           
             receiver = self._active_receivers.pop(transfer_id, None)
             if receiver:
                 success, path_or_err = receiver.finalize_and_verify()
                 if success:
                     if self.on_file_complete:
-                        self.on_file_complete(transfer_id, os.path.basename(path_or_err), path_or_err)
+                        stats = {
+                            "filesize": data.get("filesize", receiver.filesize),
+                            "total_chunks": data.get("total_chunks", receiver.total_chunks),
+                            "elapsed_time": data.get("elapsed_time", 0.0),
+                            "is_upload": False,
+                            "sender": data.get("sender", ""),
+                        }
+                        self.on_file_complete(transfer_id, os.path.basename(path_or_err), path_or_err, stats)
                 else:
                     if self.on_error:
                         self.on_error(path_or_err)
@@ -516,8 +527,10 @@ class CollaborationClient:
         Luồng phát file UDP Streaming với cơ chế bảo đảm tin cậy Selective Repeat Sliding Window ARQ.
         """
         try:
+            start_time = time.time()
             sender = FileSender(filepath, chunk_size=UDP_CHUNK_SIZE)
             total_chunks = sender.total_chunks
+            target_user = self._file_targets.get(sender.filename, "")
             logger.info(f"[UDP Sender] Bắt đầu truyền file '{sender.filename}' ({sender.filesize} bytes, {total_chunks} chunks) [ID: {transfer_id}]")
 
             self._active_senders_acks[transfer_id] = set()
@@ -600,11 +613,36 @@ class CollaborationClient:
             self._ack_events.pop(transfer_id, None)
 
             # 6. Báo hoàn tất qua kênh TCP Control
+            elapsed_time = round(time.time() - start_time, 2)
             if self.is_connected:
-                send_packet(self.sock, MessageType.FILE_TRANSFER_COMPLETE, {"transfer_id": transfer_id})
+                send_packet(self.sock, MessageType.FILE_TRANSFER_COMPLETE, {
+                    "transfer_id": transfer_id,
+                    "target": target_user,
+                    "filename": sender.filename,
+                    "filesize": sender.filesize,
+                    "total_chunks": total_chunks,
+                    "elapsed_time": elapsed_time
+                })
                 logger.info(f"[✓] Hoàn tất 100% truyền file '{sender.filename}' [ID: {transfer_id}]")
+                
+                # 7. Xóa file tạm đi
+                upload_dir = os.path.abspath("./uploads")
+                if os.path.abspath(filepath).startswith(upload_dir) and os.path.exists(filepath):
+                    try:
+                        os.remove(filepath)
+                        logger.info(f"[Cleanup] Đã tự động xóa file tạm sau khi gửi xong: {filepath}")
+                    except Exception as e:
+                        logger.warning(f"[Cleanup] Không thể xóa file tạm: {e}")
+                
                 if self.on_file_complete:
-                    self.on_file_complete(transfer_id, sender.filename, filepath)
+                    stats = {
+                        "filesize": sender.filesize,
+                        "total_chunks": total_chunks,
+                        "elapsed_time": elapsed_time,
+                        "is_upload": True,
+                        "target": target_user,
+                    }
+                    self.on_file_complete(transfer_id, sender.filename, filepath, stats)
 
         except Exception as e:
             logger.error(f"[X] Lỗi trong luồng upload UDP file ({filepath}): {e}", exc_info=True)

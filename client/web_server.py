@@ -43,9 +43,13 @@ def bind_client_events(client):
     client.on_file_progress = lambda tid, percent, is_up: broadcast_sse("file_progress", {
         "transfer_id": tid, "percent": percent, "is_upload": is_up
     })
-    client.on_file_complete = lambda tid, name, path: broadcast_sse("file_complete", {
-        "transfer_id": tid, "filename": name, "filepath": path
-    })
+    def _on_file_complete_handler(tid, name, path, stats=None):
+        payload = {"transfer_id": tid, "filename": name, "filepath": path}
+        if isinstance(stats, dict):
+            payload.update(stats)
+        broadcast_sse("file_complete", payload)
+
+    client.on_file_complete = _on_file_complete_handler
     client.on_error = lambda msg: broadcast_sse("error", {"message": msg})
 
 

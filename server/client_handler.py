@@ -216,22 +216,6 @@ class ClientHandler(threading.Thread):
         if not success:
             send_packet(self.sock, MessageType.ERROR_RESP, {"message": f"Người dùng '{target}' hiện không trực tuyến."})
 
-    # def _handle_chat_history_req(self, data: any):
-    #     """
-    #     Xử lý yêu cầu lấy lịch sử chat từ Client.
-    #     """
-    #     if not isinstance(data, dict):
-    #         return
-    #     target = data.get("target", BROADCAST_TARGET) 
-    #     messages = []
-    #     if self.chat_history:
-    #         messages = self.chat_history.get_history(self.username, target)
-
-    #     send_packet(self.sock, MessageType.CHAT_HISTORY_RESP, {
-    #         "target": target,
-    #         "messages": messages,
-    #     })
-
     def _handle_chat_history_req(self, data: any):
         if not isinstance(data, dict):
             return
@@ -301,7 +285,31 @@ class ClientHandler(threading.Thread):
         if not isinstance(data, dict):
             return
         transfer_id = data.get("transfer_id")
-        self.file_router.complete_transfer(transfer_id, self.username)
+        target = data.get("target")
+        filename = data.get("filename")
+        filesize = data.get("filesize", 0)
+        total_chunks = data.get("total_chunks", 0)
+        elapsed_time = data.get("elapsed_time", 0.0)
+
+        stats = {
+            "total_chunks": total_chunks,
+            "elapsed_time": elapsed_time,
+            "filesize": filesize,
+        }
+        transfer = self.file_router.complete_transfer(transfer_id, self.username, stats=stats)
+
+        receiver = target or (transfer.receiver if transfer else None)
+        if receiver and self.chat_history:
+            timestamp = time.strftime("%H:%M:%S")
+            self.chat_history.add_file_message(
+                sender=self.username,
+                target=receiver,
+                filename=filename or (transfer.filename if transfer else "unknown"),
+                filesize=filesize or (transfer.filesize if transfer else 0),
+                total_chunks=total_chunks,
+                elapsed_time=elapsed_time,
+                timestamp=timestamp
+            )
 
     def _cleanup(self):
         """

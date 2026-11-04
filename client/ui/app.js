@@ -86,7 +86,13 @@ evtSource.addEventListener('chat_history', (e) => {
     if (!chatMessages) return;
     chatMessages.innerHTML = '';
     JSON.parse(e.data).messages.forEach(msg => {
-        appendMessage(msg.sender, msg.text, msg.sender === currentUser ? 'self' : 'other');
+        if (msg.type === 'file' || msg.file_info) {
+            appendFileNotice(msg.file_info || msg);
+        } else if (msg.type === 'sys') {
+            appendMessage(msg.sender, msg.text, 'sys');
+        } else {
+            appendMessage(msg.sender, msg.text, msg.sender === currentUser ? 'self' : 'other');
+        }
     });
 });
 
@@ -116,7 +122,19 @@ evtSource.addEventListener('file_progress', (e) => {
 evtSource.addEventListener('file_complete', (e) => {
     if (!chatMessages) return;
     document.getElementById('progress-box').classList.add('hidden');
-    appendMessage('Hệ thống', `File ${JSON.parse(e.data).filename} đã chuyển thành công.`, 'sys');
+    const data = JSON.parse(e.data);
+    const filePeer = data.is_upload ? data.target : data.sender;
+    if (!filePeer || currentTarget === filePeer) {
+        appendFileNotice(data);
+    } else {
+        unreadUsers.add(filePeer);
+        const peerElement = document.getElementById(`peer-${filePeer}`);
+        if (peerElement && !peerElement.querySelector('.unread-dot')) {
+            const dot = document.createElement('span');
+            dot.className = 'unread-dot';
+            peerElement.appendChild(dot);
+        }
+    }
 });
 
 async function respondFile(accept) {
@@ -204,6 +222,49 @@ function appendMessage(sender, text, type) {
     div.className = `msg-bubble msg-${type}`;
     if (type !== 'sys') div.innerHTML = `<div class="msg-sender">${sender}</div>${text}`;
     else div.innerText = text;
+    chatMessages.appendChild(div);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function formatFileSize(bytes) {
+    if (!bytes || bytes === 0) return '0 B';
+    const k = 1024;
+    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
+
+function appendFileNotice(info) {
+    if (!chatMessages) return;
+    const filename = info.filename || 'Unknown file';
+    const filesizeStr = info.filesize_str || formatFileSize(info.filesize || 0);
+    const totalChunks = info.total_chunks || 1;
+    const elapsedTime = info.elapsed_time !== undefined ? `${info.elapsed_time}s` : 'N/A';
+    
+    let speedStr = info.speed_str;
+    if (!speedStr) {
+        const bytes = info.filesize || 0;
+        const time = info.elapsed_time || 0;
+        if (time > 0 && bytes > 0) {
+            const kbps = (bytes / 1024) / time;
+            speedStr = kbps >= 1024 ? `${(kbps / 1024).toFixed(2)} MB/s` : `${kbps.toFixed(1)} KB/s`;
+        } else {
+            speedStr = 'N/A';
+        }
+    }
+
+    const div = document.createElement('div');
+    div.className = 'msg-bubble msg-sys msg-file-notice';
+    div.innerHTML = `
+        <div class="file-notice-header">📁 <span>Truyền file thành công</span></div>
+        <div class="file-notice-name">${filename}</div>
+        <div class="file-notice-stats">
+            <div>📦 Dung lượng: <b>${filesizeStr}</b></div>
+            <div>🧩 Số chunk: <b>${totalChunks}</b></div>
+            <div>⏱️ Thời gian: <b>${elapsedTime}</b></div>
+            <div>🚀 Tốc độ: <b>${speedStr}</b></div>
+        </div>
+    `;
     chatMessages.appendChild(div);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }

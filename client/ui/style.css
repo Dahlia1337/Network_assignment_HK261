@@ -275,3 +275,43 @@ button:hover {
   margin-left: 5px;
   vertical-align: middle;
 }
+
+.msg-file-notice {
+  align-self: center;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 10px 16px;
+  color: #334155;
+  font-size: 13px;
+  max-width: 80%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  margin: 6px 0;
+  text-align: left;
+}
+.file-notice-header {
+  font-weight: 600;
+  color: #0284c7;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.file-notice-name {
+  font-weight: bold;
+  color: #1e293b;
+  word-break: break-all;
+  margin-bottom: 6px;
+}
+.file-notice-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 12px;
+  font-size: 12px;
+  color: #64748b;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 6px;
+}
+.file-notice-stats b {
+  color: #0f172a;
+}

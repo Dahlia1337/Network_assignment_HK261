@@ -183,7 +183,7 @@ class FileRouter:
 
         return False
 
-    def complete_transfer(self, transfer_id: str, sender: str):
+    def complete_transfer(self, transfer_id: str, sender: str, stats: Optional[dict] = None):
         """
         Đánh dấu hoàn tất phiên truyền tệp và giải phóng phiên.
         """
@@ -191,9 +191,21 @@ class FileRouter:
             transfer = self._transfers.pop(transfer_id, None)
 
         if transfer:
+            payload = {
+                "transfer_id": transfer_id,
+                "filename": transfer.filename,
+                "filesize": transfer.filesize,
+                "sha256": transfer.sha256_checksum,
+                "sender": transfer.sender,
+            }
+            if stats:
+                payload.update(stats)
+
             self.session_manager.unicast(
                 transfer.receiver,
                 MessageType.FILE_TRANSFER_COMPLETE,
-                {"transfer_id": transfer_id, "filename": transfer.filename, "sha256": transfer.sha256_checksum},
+                payload,
             )
             logger.info(f"[File] Hoàn tất thành công truyền file '{transfer.filename}' [ID: {transfer_id}]")
+            return transfer
+        return None
